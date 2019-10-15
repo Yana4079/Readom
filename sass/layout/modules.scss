@@ -1,0 +1,191 @@
+
+.shild {
+ @include center(x);
+ top: -25px;
+  @include flex(center, center);
+  width: 113px;
+  padding: 1em 0 .5em 0;
+  @include fF(23px, 16px, 400px, 1920px, 20px);
+  text-align: center;
+  color: #fff;
+  background: $accent-gradient;
+  border-radius: 4px;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 96%;
+    left: 0;
+    width: 100%;
+    height: 28%;
+    background: url(../img/trngl.svg) center top/100% auto no-repeat;
+  }
+  @include bp(600px) {
+    top: -40px;
+    width: 180px;
+    &:after {
+      height: 35%;
+    }
+  }
+}
+
+.shild__sale {
+  flex: 1 1 100%;
+  margin: 2px 0;
+  @include fF(45px, 36px, 400px, 1920px, 20px);
+}
+.shild__prime {
+  @include in-b;
+  margin-left: 5px;
+}
+
+/*.reviews*/
+
+.reviews {
+  padding: 70px 0 50px 0;
+  background-position: 3% 100%, 97% 100%;
+    background-repeat: no-repeat;
+  @include bp(1200px) {
+    background-image: url(../img/5.png) !important;
+    background-position: 50% 50%;
+  }
+  .swiper-button-prev {
+    left: 8%;
+    background-image: url(../img/button__slider.png);
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    cursor: pointer;
+    -webkit-transform: rotate(180deg); // разворот элемента для разных бразуеров
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    @include bp(1195px) {
+      width: 50px;
+      height: 50px;
+    }
+    @include bp(1156px) {
+      left: 2%;
+    }
+    @include bp(991px) {
+      left: 0;
+    }
+    @include bp(700px) {
+      top: 200px;
+      margin-top: 0;
+    }
+  }
+  .swiper-button-next {
+    right: 8%;
+    background-image: url(../img/button__slider.png);
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    cursor: pointer;
+    @include bp(1195px) {
+      right: 0;
+      width: 50px;
+      height: 50px;
+    }
+    @include bp(1156px) {
+      right: 2%;
+    }
+    @include bp(991px) {
+      right: 0;
+    }
+    @include bp(700px) {
+      right: 0;
+      top: 200px;
+      margin-top: 0;
+    }
+  }
+}
+
+
+.reviews__slider {
+  max-width: 900px;
+
+}
+
+.reviews__item {
+  width: 45%;
+  padding: 40px 30px;
+  border: 1px solid #EFEFEF;
+  border-radius: 2px;
+  margin: 0 auto;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  font-size: 17px;
+  font-weight: 300;
+  backdrop-filter: blur(12px);
+  
+background: rgba(255, 255, 255, 0.7);
+}
+
+.reviews__ava {
+  width: 173px;
+  height: 173px;
+  margin: 0 auto 20px auto;
+  border-radius: 2px;
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover; 
+  }
+  @include bp(700px) {
+    width: 113px;
+    height: 113px;
+  }
+}
+
+.reviews__autor {
+  margin-bottom: 17px;
+  font-size: 20px;
+  text-align: center;
+  color: #2B1C8A;
+}
+
+.reviews__text {
+  color: #181818;
+}
+
+.reviews__url {
+  text-align: center;
+  color: #181818;
+  a {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  word-break: break-all;
+  &:before {
+    content: '';
+    @include center(y);
+    left: 0;
+    width: 30px;
+    height: 30px;
+    }
+  }
+   [href*="://www."] {
+    &:before {
+      background: url(../img/world-wide-web.png) center no-repeat;
+    }
+  } 
+  [href*="instagram"] {
+    &:before {
+      background: url(../img/instagram.png) center no-repeat;
+    }
+  }
+  [href*="raidex.ru"] {
+    &:before {
+      background: url(../img/world-wide-web.png) center no-repeat;
+    }
+  }
+  [href*="m.facebook.com"] {
+    &:before {
+      background: url(../img/world-wide-web.png) center no-repeat;
+    }
+  }
+
+}
+ 
+
